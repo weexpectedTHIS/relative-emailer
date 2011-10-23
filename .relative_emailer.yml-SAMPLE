@@ -1,0 +1,7 @@
+flickr_api_key: KEY_HERE
+flickr_shared_secret: SECRET_HERE
+flickr_username: FLICKR_USERNAME_HERE
+gmail_from: GMAIL_EMAIL_ADDRESS_HERE
+gmail_password: GMAIL_PASSWORD HERE
+email_to: [COMMA_SEPARATED_EMAIL_ADDRESSES_HERE]
+default_days: 3

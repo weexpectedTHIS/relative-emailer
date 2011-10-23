@@ -1,0 +1,21 @@
+From: <%= EMAIL_FROM %>
+To: <%= EMAIL_TO.join(',') %>
+MIME-Version: 1.0
+Content-type: text/html
+Subject: <%= subject %>
+
+<% pics_by_date.keys.sort.reverse.each do |date| %>
+  <h1><%= date.strftime('%A, %B %e') %></h1>
+  <div>
+    <% pics_by_date[date].each do |pic| %>
+      <div>
+        <div><a href="<%= pic[:url] %>"><%= pic[:title] %><%= ' (VIDEO - <em>click to watch</em>)' if pic[:video] %></a></div>
+        <a href="<%= pic[:url] %>"><img src="<%= pic[:src] %>" /></a>
+      </div>
+      <br />
+      <br />
+    <% end %>
+  </div>
+  <br />
+  <br />
+<% end %>
