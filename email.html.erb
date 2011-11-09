@@ -1,5 +1,5 @@
-From: <%= EMAIL_FROM %>
-To: <%= EMAIL_TO.join(',') %>
+From: <%= CONFIG['gmail_from'] %>
+To: <%= CONFIG['email_to'].join(',') %>
 MIME-Version: 1.0
 Content-type: text/html
 Subject: <%= subject %>

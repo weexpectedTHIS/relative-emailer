@@ -1,0 +1,33 @@
+What is this?
+=============
+
+Just a simple tool to send emails to relatives or anyone who may want to see your latest pictures from flickr.  It will require that you have a flickr and a gmail account.  I'm not interested in supporting other setups because this works for me.  I'm really just storing this on github so anyone who wants can use this as well.
+
+What you'll need
+================
+
+- Flickr account
+- Flickr API key and shared secret
+- Gmail account
+- Installation of ruby
+
+How to use it
+=============
+
+Make sure to copy the .relative-emailer.yml-SAMPLE file to your home directory (~/.relative-emailer.yml) and rename it without the -SAMPLE part.  Fill it out with the information you want.  You will need to get a flickr api key and shared secret.  If you don't know how to do that, just google for "flickr api".  It will create a simple html email which you can use to send to relatives which may not know how to use an rss feed and/or don't want to check flickr every couple of days.
+
+The typical use of the script will look something like this:
+
+ruby relative-emailer.rb
+
+Just running the script barebones like that will send and email through your gmail account to anyone listed under "email_to" in the yml file.  That email will contain a feed from the last "default_days" (also listed in the yml file) of pictures and videos with links for each.
+
+If you want to do a dry run and just see what it would have sent in the email simply add the option -dry.
+
+ruby relative-emailer.rb -dry
+
+Other command line options are -days 5.  Obviously that specifies the last number of days to select pictures and videos from.  Also -subject "Subject for email" is available.  The subject is defaulted to "Daily Flickr Digest".
+
+
+
+Have fun!
